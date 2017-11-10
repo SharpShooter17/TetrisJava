@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane minWidth="-Infinity" prefWidth="216.0" style="-fx-background-image: url('brick.gif'); -fx-font-family: 'Courier New'; -fx-font-size: 16px; -fx-font-weight: bold;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tetris.tetris.uiMenuController">
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <TextField fx:id="labelNick" promptText="Your nick" style="-fx-font-size: 16;">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-font-size: 26;" text="Chose level" textFill="YELLOW">
+               <VBox.margin>
+                  <Insets bottom="16.0" top="16.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="record-sales" fx:id="buttonEasy" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonEasyClicked" text="Easy">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="record-sales" fx:id="buttonMedium" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonMediumClicked" text="Medium" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="record-sales" fx:id="buttonHard" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonHardClicked" text="Hard">
+               <VBox.margin>
+                  <Insets bottom="16.0" top="16.0" />
+               </VBox.margin>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" style="-fx-font-size: 24;" text="Board size" textFill="YELLOW">
+               <VBox.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" />
+               </VBox.margin>
+            </Label>
+            <RadioButton fx:id="radio16x32" mnemonicParsing="false" text="16X32" textFill="YELLOW">
+               <padding>
+                  <Insets left="16.0" right="16.0" />
+               </padding>
+               <toggleGroup>
+                  <ToggleGroup fx:id="radioBoardSize" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radio8x16" mnemonicParsing="false" selected="true" text="8X16" textFill="YELLOW" toggleGroup="$radioBoardSize">
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" />
+               </padding>
+            </RadioButton>
+            <Button id="rich-blue" fx:id="buttonStartNewGame" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonStartNewGameClick" style="-fx-font-size: 26;" text="Start" />
+            <Button id="rich-blue" fx:id="buttonScores" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonScoresClicked" style="-fx-font-size: 26;" text="Scores">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="rich-blue" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonAboutClicked" style="-fx-font-size: 26;" text="About">
+               <VBox.margin>
+                  <Insets top="16.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="record-sales" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonExitClick" text="Exit">
+               <VBox.margin>
+                  <Insets bottom="16.0" top="16.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@button.css" />
+   </stylesheets>
+</StackPane>
